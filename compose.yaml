@@ -1,0 +1,7 @@
+﻿services:
+  knightstour:
+    image: knightstour
+    build:
+      context: .
+      dockerfile: KnightsTour/Dockerfile
+
