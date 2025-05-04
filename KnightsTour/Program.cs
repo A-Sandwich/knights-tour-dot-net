@@ -3,5 +3,5 @@
 using KnightsTour;
 
 Console.WriteLine("Hello, World!");
-var manager = new BoardManager();
+var manager = new BoardManager(8);
 manager.DepthFirstSearch();

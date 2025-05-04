@@ -8,10 +8,12 @@ public class BoardManager
     private int Iteration { get; set; } = 0;
     private int FailedPathsCount { get; set; } = 0;
     private TimeSpan RunTime { get; set; } = TimeSpan.Zero;
+    private int BoardSize { get; set; }
 
-    public BoardManager()
+    public BoardManager(int boardSize = 5)
     {
-        Boards.Add(new Board());
+        BoardSize = boardSize;
+        Boards.Add(new Board(BoardSize));
     }
 
     public void DepthFirstSearch()
@@ -29,7 +31,7 @@ public class BoardManager
             }
             else
             {
-                var nextBoard = new Board(furthestBoard, nextMove);
+                var nextBoard = new Board(furthestBoard, nextMove, BoardSize);
                 Boards.Add(nextBoard);
             }
             Iteration++;

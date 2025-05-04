@@ -17,7 +17,7 @@ public class Board
         PossibleMoves = GetPossibleMoves(LastMove);
     }
 
-    public Board(Board board, Tuple<int, int> nextMove)
+    public Board(Board board, Tuple<int, int> nextMove, int boardSize = 5)
     {
         BoardSize = board.BoardSize;
         Cells = new int[BoardSize, BoardSize];
