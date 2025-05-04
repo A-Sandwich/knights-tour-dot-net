@@ -71,7 +71,7 @@ public class Board
         {
             if (index % BoardSize == 0)
                 result += "\n";
-            result +=$"{cell:D2}|";
+            result +=$"{cell:D4}|";
             index++;
         }
         return result;
